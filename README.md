@@ -160,8 +160,7 @@ Microservices_Architecture/
 │   ├── report.md             
 │   └── evidence/             
 │       └── README.md
-├── seed.js
-├── test-edge-cases.ps1       
+├── seed.js    
 └── README.md
 ```
 

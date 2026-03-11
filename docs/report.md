@@ -84,8 +84,6 @@ The Enrollment Service implements configurable timeouts (default: 5 seconds via 
 
 ## 5. Reflections
 
-**Reflection**
-
 During the development of our microservices architecture, we encountered several challenges that helped us better understand how distributed systems work. One of the main difficulties was implementing reliable HTTP communication between services while handling possible errors. Unlike monolithic systems where components interact directly, microservices communicate through network requests, which can fail due to timeouts, connection issues, or unexpected responses. Because of this, we had to carefully design how each service handles these failures and returns proper error messages.
 
 Another challenge we faced was testing timeout scenarios and ensuring consistent error responses across all services. Simulating timeouts required adjusting configurations or temporarily modifying service behavior, which showed us the importance of making timeout values configurable instead of hardcoding them. We also realized that without a clear API contract, error formats between services could easily become inconsistent. This experience emphasized the need for proper planning and standardized response structures when building microservices.
