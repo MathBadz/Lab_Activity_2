@@ -1,0 +1,11 @@
+﻿HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 199
+ETag: W/"c7-RN8w/pZ86imuBflMNSNecX4RSG4"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Student created successfully","data":{"id":"0bbbcb0b-ef26-44e8-9767-f32074c5f063","fullName":"John Doe","email":"john.doe@university.edu","age":20,"createdAt":"2026-03-11T15:10:51.255Z"}}

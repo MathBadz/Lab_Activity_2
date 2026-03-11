@@ -1,0 +1,55 @@
+services:
+  # API Gateway - Entry point for all requests
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - STUDENT_SERVICE_URL=http://student-service:3001
+      - COURSE_SERVICE_URL=http://course-service:3002
+      - ENROLLMENT_SERVICE_URL=http://enrollment-service:3003
+    depends_on:
+      - student-service
+      - course-service
+      - enrollment-service
+    networks:
+      - microservices-network
+
+  # Student Service
+  student-service:
+    build: ./student-service
+    container_name: student-service
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+    networks:
+      - microservices-network
+
+  # Course Service
+  course-service:
+    build: ./course-service
+    container_name: course-service
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+    networks:
+      - microservices-network
+
+  # Enrollment Service
+  enrollment-service:
+    build: ./enrollment-service
+    container_name: enrollment-service
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge

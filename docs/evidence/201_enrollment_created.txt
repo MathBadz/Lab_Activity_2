@@ -1,0 +1,11 @@
+﻿HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 336
+ETag: W/"150-P+Likd4o3AAQNef6z6pN9aT982w"
+Date: Wed, 11 Mar 2026 15:10:52 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"id":"4ff34a4d-904a-42ca-9816-9d8a2a33a158-07bbff7c-d604-4c61-81d9-60d2b6d5569b","message":"Enrollment created successfully","data":{"studentId":"4ff34a4d-904a-42ca-9816-9d8a2a33a158","courseId":"07bbff7c-d604-4c61-81d9-60d2b6d5569b","enrolledAt":"2026-03-11T15:10:52.011Z","studentName":"Alice Smith","courseName":"Database Systems"}}

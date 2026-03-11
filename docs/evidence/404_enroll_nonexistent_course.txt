@@ -1,0 +1,11 @@
+﻿HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 84
+ETag: W/"54-17MaM27+EJwGcAOBSkofR1ZIR5o"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"COURSE_NOT_FOUND","message":"Course with ID \"fake-course-id\" not found"}

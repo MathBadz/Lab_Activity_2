@@ -1,0 +1,11 @@
+﻿HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 88
+ETag: W/"58-L27w8qCmkbuUuLf3MIR0A3BVjUk"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"VALIDATION_ERROR","message":"name is required and must be a non-empty string"}

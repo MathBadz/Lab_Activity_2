@@ -1,0 +1,11 @@
+﻿HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 91
+ETag: W/"5b-V76xKW2Nxnq9P4wGwTFPu9iwVuQ"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"VALIDATION_ERROR","message":"email is required and must be a valid email format"}

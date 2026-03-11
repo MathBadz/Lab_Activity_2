@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Course System (Microservices)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Student Course System</h1>
+    <p>Microservices Architecture - Manage students, courses, and enrollments</p>
+    <div class="architecture-badge">MICROSERVICES</div>
+  </header>
+
+  <main>
+    <!-- ========== STUDENTS SECTION ========== -->
+    <section id="students-section">
+      <h2>Students <span class="service-tag">Student Service :3001</span></h2>
+
+      <form id="student-form">
+        <h3>Add Student</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input type="text" id="student-name" placeholder="e.g. Juan Dela Cruz" required />
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email</label>
+            <input type="email" id="student-email" placeholder="e.g. juan@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="student-age">Age</label>
+            <input type="number" id="student-age" placeholder="e.g. 20" min="1" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Student</button>
+      </form>
+
+      <div class="table-container">
+        <h3>All Students <span id="student-count" class="badge">0</span></h3>
+        <table id="students-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="4" class="empty-msg">No students yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== COURSES SECTION ========== -->
+    <section id="courses-section">
+      <h2>Courses <span class="service-tag">Course Service :3002</span></h2>
+
+      <form id="course-form">
+        <h3>Add Course</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="course-name">Course Name</label>
+            <input type="text" id="course-name" placeholder="e.g. Web Development" required />
+          </div>
+          <div class="form-group">
+            <label for="course-desc">Description</label>
+            <input type="text" id="course-desc" placeholder="e.g. HTML, CSS, JS" required />
+          </div>
+          <div class="form-group">
+            <label for="course-credits">Credits</label>
+            <input type="number" id="course-credits" placeholder="e.g. 3" min="1" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Course</button>
+      </form>
+
+      <div class="table-container">
+        <h3>All Courses <span id="course-count" class="badge">0</span></h3>
+        <table id="courses-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Credits</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="4" class="empty-msg">No courses yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== ENROLLMENTS SECTION ========== -->
+    <section id="enrollments-section">
+      <h2>Enrollments <span class="service-tag">Enrollment Service :3003</span></h2>
+
+      <form id="enrollment-form">
+        <h3>Enroll Student in Course</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enroll-student">Select Student</label>
+            <select id="enroll-student" required>
+              <option value="">-- Choose a student --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="enroll-course">Select Course</label>
+            <select id="enroll-course" required>
+              <option value="">-- Choose a course --</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enroll</button>
+      </form>
+
+      <div class="table-container">
+        <h3>All Enrollments <span id="enrollment-count" class="badge">0</span></h3>
+        <table id="enrollments-table">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Course</th>
+              <th>Enrolled At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="3" class="empty-msg">No enrollments yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== SERVICE STATUS ========== -->
+    <section id="status-section">
+      <h2>Service Status</h2>
+      <div id="service-status">
+        <div class="status-card" id="student-service-status">
+          <span class="status-indicator"></span>
+          <span class="status-name">Student Service</span>
+          <span class="status-port">:3001</span>
+        </div>
+        <div class="status-card" id="course-service-status">
+          <span class="status-indicator"></span>
+          <span class="status-name">Course Service</span>
+          <span class="status-port">:3002</span>
+        </div>
+        <div class="status-card" id="enrollment-service-status">
+          <span class="status-indicator"></span>
+          <span class="status-name">Enrollment Service</span>
+          <span class="status-port">:3003</span>
+        </div>
+      </div>
+      <button class="btn btn-secondary" onclick="checkServiceHealth()">Refresh Status</button>
+    </section>
+  </main>
+
+  <!-- Toast notification container -->
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

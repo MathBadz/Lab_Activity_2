@@ -1,0 +1,11 @@
+﻿HTTP/1.1 400 Bad Request
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 87
+ETag: W/"57-whS236Ts4V7mK6pfXlGzLAwGM+0"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"VALIDATION_ERROR","message":"age is required and must be a positive integer"}

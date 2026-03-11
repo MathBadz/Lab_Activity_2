@@ -1,0 +1,11 @@
+﻿HTTP/1.1 201 Created
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 233
+ETag: W/"e9-LxG7agec1pc0Rb3vU2IwyKbhkC8"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Course created successfully","data":{"id":"0ff4dc39-b971-4e2e-95d5-bd05b15b8a80","name":"Introduction to Microservices","description":"Learn microservices architecture","credits":3,"createdAt":"2026-03-11T15:10:51.308Z"}}

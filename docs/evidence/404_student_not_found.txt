@@ -1,0 +1,11 @@
+﻿HTTP/1.1 404 Not Found
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 93
+ETag: W/"5d-volDeWGqn33ADuTkCq9bJJoANtg"
+Date: Wed, 11 Mar 2026 15:10:51 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"error":"STUDENT_NOT_FOUND","message":"Student with ID \"non-existent-id-12345\" not found"}
